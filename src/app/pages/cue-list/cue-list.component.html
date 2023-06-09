@@ -1,0 +1,69 @@
+
+<app-info></app-info>
+<table mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>Numéro</th>
+    <td mat-cell *matCellDef="let element">{{element.id}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef>Date</th>
+    <td mat-cell *matCellDef="let element">{{element.date | date:'short'}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="applicant">
+    <th mat-header-cell *matHeaderCellDef>Demandeur</th>
+    <td mat-cell *matCellDef="let element">{{element.applicant}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="farms">
+    <th mat-header-cell *matHeaderCellDef>NIF/CIF<br/>Exploitation</th>
+    <td mat-cell *matCellDef="let element">
+      <ul>
+        <li *ngFor="let farm of element.farms">
+          <!-- <mat-chip color="warn">{{farm}}</mat-chip> -->
+          <span class="state">{{farm}}</span>
+        </li>
+      </ul>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="farmsHolders">
+    <th mat-header-cell *matHeaderCellDef>NIF/CIF<br/>Titulaire</th>
+    <td mat-cell *matCellDef="let element">
+      <ul>
+        <li *ngFor="let farmsHolder of element.farmsHolders">
+          <!-- <mat-chip color="warn">{{farmsHolder}}</mat-chip> -->
+          <span class="state">{{farmsHolder}}</span>
+        </li>
+      </ul>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="managmentUnit">
+    <th mat-header-cell *matHeaderCellDef>Unité de gestion</th>
+    <td mat-cell *matCellDef="let element">{{element.managmentUnit}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="state">
+    <th mat-header-cell *matHeaderCellDef class="center">État de traitement</th>
+    <td mat-cell *matCellDef="let element" class="center">
+      <span class="state" [ngClass]="{'ok' : element.state === 'OK', 'failed' : element.state === 'FALLO', 'partial' : element.state === 'PARTIAL'}">{{element.state}}</span>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="report">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element">
+      <a *ngIf="element.state !== 'OK'" mat-icon-button routerLink="detail" color="primary" [title]="'Rapport détaillé du CUE ' + element.id">
+      <mat-icon>description</mat-icon>
+      </a>
+  </td>
+  </ng-container>
+
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>

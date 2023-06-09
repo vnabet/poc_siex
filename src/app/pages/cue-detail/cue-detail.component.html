@@ -1,0 +1,43 @@
+<app-info></app-info>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Rapport CUE n°3</mat-card-title>
+    <mat-card-subtitle>08/06/2023 15:32</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <ul class="detail">
+      <li><span class="label">Demandeur</span><span class="value">Lourdes Maria</span></li>
+      <li><span class="label">NIF/CIF Exploitation</span><span class="value"><span class="state">J41595</span><span class="state">J41592</span></span></li>
+      <li><span class="label">NIF/CIF Titulaire</span><span class="value"><span class="state">14678287F</span><span class="state">A4578964A</span></span></li>
+      <li><span class="label">Unité de gestion</span><span class="value"></span></li>
+    </ul>
+  </mat-card-content>
+</mat-card>
+
+
+<p class="info">
+  <mat-icon>dangerous</mat-icon>
+  <span>Etat de l'envoi: FALLO</span>
+</p>
+
+<table mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="code">
+    <th mat-header-cell *matHeaderCellDef>Code</th>
+    <td mat-cell *matCellDef="let element">{{element.code}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="meaning">
+    <th mat-header-cell *matHeaderCellDef>Signification</th>
+    <td mat-cell *matCellDef="let element">{{element.meaning}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef>Description</th>
+    <td mat-cell *matCellDef="let element">{{element.description}}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>

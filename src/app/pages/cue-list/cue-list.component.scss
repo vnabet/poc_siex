@@ -1,0 +1,50 @@
+table ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+
+  li {
+    // display: inline-block;
+    padding: 2px;
+  }
+}
+
+// .mat-mdc-table {
+//   td, th {
+//     background-color: red;
+//     border-right: 1px solid red;
+//     text-align: center;
+//   }
+// }
+
+.center {
+  text-align: center;
+}
+
+.state {
+  // font-weight: 600;
+  min-width: 80px;
+  padding: 5px 5px;
+  border-radius: 1rem;
+  background-color: #f5f5f5;
+  display: inline-block;
+  text-align: center;
+  // align-items: center;
+  // justify-content: center;
+  &.ok {
+    background-color: rgb(78, 179, 78);
+    color: white;
+  }
+
+  &.partial {
+    background-color: orange;
+    color: white;
+  }
+
+  &.failed {
+    background-color: #f44336;
+    color: white;
+
+  }
+}

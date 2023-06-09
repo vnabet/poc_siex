@@ -1,0 +1,15 @@
+
+.info {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #3f51b5;
+  color: white;
+  margin: 10px 0;
+
+  span {
+    padding-left: 15px;
+  }
+}
