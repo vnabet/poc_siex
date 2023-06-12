@@ -1,5 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+// src/styles/themes/_light.scss
+
+@use "sass:map";
+@use "@angular/material" as mat;
+
+
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$pink-palette);
+$my-accent: mat.define-palette(mat.$pink-palette, 50, A100, A400);
+
+$my-warn: mat.define-palette(mat.$red-palette);
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-accent,
+      accent: $my-accent,
+      warn: $my-warn,
+    ),
+  )
+);
+
+@include mat.core-theme($my-theme);
+@include mat.toolbar-theme($my-theme);
+
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -14,3 +42,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 
+body {
+  background-image: url(./assets/images/unicorn.jpg);
+}
