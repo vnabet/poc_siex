@@ -1,0 +1,49 @@
+$siex-palette: (
+  50: #e3f1f5,
+  100: #c5dadd,
+  200: #a5c0c5,
+  300: #84a7ad,
+  400: #6b939a,
+  500: #518088,
+  600: #467177,
+  700: #385c62,
+  800: #2b494f,
+  900: #1b3438,
+  contrast: (
+  50: rgba(black, 0.87),
+  100: rgba(black, 0.87),
+  200: rgba(black, 0.87),
+  300: rgba(black, 0.87),
+  400: rgba(black, 0.87),
+  500: white,
+  600: white,
+  700: white,
+  800: white,
+  900: white,
+  )
+);
+
+$siex-secondary-palette: (
+  50:  #f7eae6,
+  100: #e1cdc9,
+  200: #c8aca8,
+  300: #ae8c85,
+  400: #9b726b,
+  500: #885951,
+  600: #7b5049,
+  700: #6a443f,
+  800: #5b3836,
+  900: #4a2b2b,
+  contrast: (
+  50: rgba(black, 0.87),
+  100: rgba(black, 0.87),
+  200: rgba(black, 0.87),
+  300: rgba(black, 0.87),
+  400: rgba(black, 0.87),
+  500: white,
+  600: white,
+  700: white,
+  800: white,
+  900: white,
+  )
+);

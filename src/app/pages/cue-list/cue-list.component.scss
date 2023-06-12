@@ -45,6 +45,10 @@ table ul {
   &.failed {
     background-color: #f44336;
     color: white;
+  }
 
+  &.waiting {
+    background-color: darkgrey;
+    color: white;
   }
 }

@@ -1,0 +1,35 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@import "styles/palettes";
+
+@include mat.core();
+
+$my-primary: mat.define-palette($siex-palette, 500, 200, 800);
+$my-accent: mat.define-palette($siex-secondary-palette, 500, 200, 800);
+
+// $my-warn: mat.define-palette(mat.$red-palette);
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      // warn: $my-warn,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+@include mat.core-theme($my-theme);
+@include mat.button-theme($my-theme);
+@include mat.icon-button-theme($my-theme);
+@include mat.icon-theme($my-theme);
+// @include mat.chips-theme($my-theme);
+@include mat.toolbar-theme($my-theme);
+@include mat.table-theme($my-theme);
+@include mat.card-theme($my-theme);
+
+// @include mat.all-component-themes($my-theme);
+@include mat.typography-hierarchy($my-theme);

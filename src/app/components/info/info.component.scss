@@ -1,3 +1,8 @@
+@use '@angular/material' as mat;
+@import '../../../styles/palettes';
+
+$my-palette: mat.define-palette($siex-secondary-palette);
+
 
 .info {
   display: flex;
@@ -6,7 +11,8 @@
   padding: 10px;
   border-radius: 5px;
   // background-color: #3f51b5;
-  background-color: #673ab7;
+  //background-color: #673ab7;
+  background: mat.get-color-from-palette($my-palette, 500);
   color: white;
   margin: 10px 0;
 

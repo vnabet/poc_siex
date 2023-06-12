@@ -43,7 +43,7 @@ export class CueDetailComponent {
   dataSource = ELEMENT_DATA;
 
   constructor(navService:NavService) {
-    navService.update('Rapport CUE n°3','/')
+    navService.update('Retour','/')
   }
 
 }

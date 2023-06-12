@@ -15,8 +15,9 @@ const ELEMENT_DATA: CUE[] = [
   {id:'1', date: new Date(),  applicant: 'Lourdes Maria', farms: ['J41595', 'J41592'], farmsHolders: ['14678287F', '4578964A'], managmentUnit:'', state:'FALLO'},
   {id:'2', date: new Date(),  applicant: 'Lourdes Maria', farms: ['A0075'], farmsHolders: [], managmentUnit:'', state:'OK'},
   {id:'3', date: new Date(),  applicant: 'Lourdes Maria', farms: ['J41595'], farmsHolders: [], managmentUnit:'', state:'PARTIAL'},
-  {id:'4', date: new Date(),  applicant: 'Lourdes Maria', farms: ['A0075'], farmsHolders: [], managmentUnit:'', state:'PARTIAL'},
-  {id:'5', date: new Date(),  applicant: 'Lourdes Maria', farms: ['J41595'], farmsHolders: [], managmentUnit:'', state:'OK'},
+  {id:'4', date: new Date(),  applicant: 'Lourdes Maria', farms: ['J41500'], farmsHolders: [], managmentUnit:'', state:'EN ATTENTE'},
+  {id:'5', date: new Date(),  applicant: 'Lourdes Maria', farms: ['A0075'], farmsHolders: [], managmentUnit:'', state:'PARTIAL'},
+  {id:'6', date: new Date(),  applicant: 'Lourdes Maria', farms: ['J41595'], farmsHolders: [], managmentUnit:'', state:'OK'},
 ];
 
 
@@ -36,7 +37,7 @@ export class CueListComponent {
 
   constructor (navService:NavService) {
 
-    navService.update('Suivi des envois CUE')
+    navService.update('')
 
   }
 
